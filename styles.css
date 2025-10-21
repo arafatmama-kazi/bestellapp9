@@ -1,0 +1,369 @@
+
+@font-face {
+  font-display: swap;
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+ 
+}
+
+.lock-scroll{
+    overflow: hidden;
+}
+
+.shopping-bag{
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    display: none;
+}
+
+@keyframes sway {
+  0%   { transform: rotate(-10deg); }
+  50%  { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+.sway {
+    animation: sway 400ms ease-in-out infinite;
+    transform-origin: center;
+}
+
+.shopping-bag:hover{
+    animation: sway 400ms ease-in-out infinite;
+    transform-origin: center;
+}
+
+.shopping-bag-dish {
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.shopping-bag-dish:hover{
+    animation: sway 400ms ease-in-out infinite;
+    transform-origin: center;
+}
+
+.round-img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 13.5%;
+    left: 50%;
+    border: 1px solid black;
+}
+
+.rating {
+    color: rgb(209, 56, 0);
+    font-weight: 700;
+}
+
+.food-selection {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    padding: 16px 8px;
+    margin: 8px 0;
+    background-color: #3c7fb6;
+}
+
+.food-selection a {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.food-selection a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: rgb(209, 56, 0);
+}
+
+.category-name {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(209, 56, 0);
+    padding-top: 16px;
+}
+
+.main-dishes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.dish-container {
+    border: 1px solid grey;
+    padding: 8px;
+    position: relative;
+}
+
+.dish-container:hover{
+    background-color: #c5d1df;
+}
+
+.dish-container p {
+    font-size: 18px;
+}
+
+.add-btn {
+    height: 36px;
+    width: 36px;
+    border-bottom: 1px solid gray; 
+    border-left: 1px solid gray; 
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.corner-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* PC-Basket styling */
+
+.basket {
+    height: 100vh;
+    width: 350px;
+    border: 1px solid black;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    margin-right: 8px;
+    overflow-y: scroll;
+    padding: 8px;
+}
+
+.basket::-webkit-scrollbar {
+    display: none;
+}
+
+.basket-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.order-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-placeholder p {
+    text-align: center;
+}
+
+.empty-bag {
+    height: 60px;
+    width: 60px;
+}
+
+.basket-btn {
+    width: 100%;
+    height: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: none;
+}
+
+.basket-btn:hover {
+    background-color: #3c7fb6;
+}
+
+.user-notification {
+    text-align: center;
+    font-weight: 800;
+    color: rgb(209, 56, 0);
+    font-size: 20px;
+}
+
+.fireworks {
+    width: 100%;
+    height: 200px;
+}
+
+/* Mobile basket */
+
+.basket-mobile-overlay {
+    border: 2px solid black;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    overflow-y: scroll;
+    z-index: 200;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
+}
+
+.basket-mobile-overlay::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.basket-mobile-overlay.open {
+    transform: translateY(0);
+}
+
+.mobile-basket-content {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.mobile-basket-btn {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(233, 220, 42);
+    display: none;
+}
+
+.overlay-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+}
+
+.inner-overlay-btn, .inner-basket-btn {
+    width: 45%;
+    height: 60px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(233, 220, 42);
+    position: sticky;
+    bottom: 0;
+}
+
+/* Basket content with dishes added */
+.separation-bar {
+    height: 3px;
+    width: 100%;
+    background-color: lightgrey;
+    padding: 0 16px;
+    margin-top: 8px;
+}
+
+.basket-icons {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+.total {
+    font-weight: 800;
+}
+
+.total-amount-table {
+    padding: 8px 0;
+}
+
+.total-amount-table {
+    width: 100%;
+}
+.total-amount-table tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+/* Media queries */
+
+@media(max-width: 680px) {
+    .basket h2 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 650px) {
+    .basket {
+        display: none;
+    }
+
+    .round-img {
+    left: 40%;
+    }
+
+    h1 {
+        padding-top: 45px;
+    }
+
+    .mobile-basket-btn {
+        display: block;
+    }
+
+    .shopping-bag {
+        display: block;
+
+    }
+
+    .shopping-bag-dish {
+        display: block;
+
+    }
+}
+
+@media(max-width: 550px) {
+    .round-img {
+    top: 12.7%;
+    }
+}
+
+
+@media(max-width: 340px) {
+    .dish-container p {
+    text-wrap: wrap;
+    padding-bottom: 10px;
+    }
+
+    .round-img {
+    top: 11.5%;
+    }
+}

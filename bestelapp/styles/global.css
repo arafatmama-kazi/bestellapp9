@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Cormorant Garamond';
+    color: black;
+    scrollbar-gutter: stable; 
+}
+
+.d-none {
+  display: none !important;
+}
+
+body{
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+  padding: 16px 0;
+  font-size: 1.5em;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   background-color: #0084ff;
+   height: 60px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 8px;
+}
+
+.logo-text {
+  display: flex;
+  width: 10%;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-text img {
+  height: 36px;
+  width: 36px;
+}
+
+.logo-text p {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.hero1 {
+    background-image: url(../assets/img/hero-min.jpg);
+    background-position:  center 55%;
+    background-size: cover;
+    width: 100%;
+    max-width: 1440px;
+    height: 350px;
+}
+
+.hero2 {
+  background-image: url(../assets/img/hero2-min.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+.close-btn{
+  display: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 16px;
+}
+
+/* Styiling the main content */
+
+main { 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding-bottom: 65px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    padding: 20px 8px;
+    position: relative;
+}
+
+
+footer {
+    background-color:  #0084ff;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    bottom: 0;   
+}
+
+footer img {
+  height: 48px;
+  width: 48px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  padding-bottom: 16px;
+  gap: 16px;
+}
+
+.footer-content p {
+  color: white;
+  font-size: 18px;
+}
+
+@media(max-width: 650px) {
+  .footer-content {
+    width: 60%;
+  }
+
+}
+
+@media(max-width: 460px) {
+  .footer-content {
+    width: 70%;
+  }
+}
